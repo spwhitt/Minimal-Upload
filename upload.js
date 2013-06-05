@@ -24,6 +24,7 @@
 			left: 0
 		});
 		this.fileInput = $("<input type='file'/>");
+		this.fileInput.attr("accept", this.options.accept);
 		this.fileInput.attr("name", this.options.name);
 		// This is the only way to make the button wider
 		this.fileInput.css("font-size", "20px");
@@ -169,7 +170,8 @@
 	$.fn.Upload.defaults = {
 		updateInterval: 500,
 		parseResponse: true,
-		name: "file"
+		name: "file",
+		accept: "*"
 	}
 	
 }(window.jQuery);

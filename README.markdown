@@ -34,6 +34,9 @@ On to the options:
 - `name`
   The name of the file. This has the same function as the name attribute in the file input control. Default is "file".
 
+- `accept`
+  Types of files to show in the file browser. Default is "\*".
+
 - `updateInterval`
   The interval in milliseconds the onUpdate function will be called. Default is 500.
 
@@ -61,6 +64,7 @@ On to the options:
 $("#upload-button").Upload({
 	url: "/where/to/upload",
 	name: "myfile",
+	accept: "video/*",
 	updateInterval: 1000,
 	onSelect: function() {
 		// File has been selected, let's see what it is:
